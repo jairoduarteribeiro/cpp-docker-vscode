@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: add-issue-number
+        name: Add issue number to commit message
+        entry: .githooks/prepare-commit-msg
+        language: script
+        stages: [commit-msg]
