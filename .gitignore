@@ -1,0 +1,5 @@
+# apple
+.DS_Store
+
+# cmake
+/build/
