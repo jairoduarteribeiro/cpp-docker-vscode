@@ -3,3 +3,10 @@
 
 # cmake
 /build/
+
+# docker
+Dockerfile
+
+# git
+/.git/
+.gitignore
