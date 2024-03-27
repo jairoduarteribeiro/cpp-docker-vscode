@@ -1,0 +1,12 @@
+# apple
+.DS_Store
+
+# cmake
+/build/
+
+# docker
+Dockerfile
+
+# git
+/.git/
+.gitignore

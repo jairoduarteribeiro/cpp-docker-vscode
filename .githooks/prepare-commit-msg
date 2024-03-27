@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the branch name
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+
+# Extract the issue number
+ISSUE_NUMBER=$(echo $BRANCH_NAME | awk -F- '{print $1}')
+
+# If there's an issue number, prepend it to the commit message
+if [[ $ISSUE_NUMBER ]]; then
+    # Check if the issue number is already in the commit message
+    if ! grep -q "^\[\#$ISSUE_NUMBER\]" $1; then
+        sed -i.bak -e "1s/^/[#$ISSUE_NUMBER] /" $1
+    fi
+fi

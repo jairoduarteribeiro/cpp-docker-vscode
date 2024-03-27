@@ -1,0 +1,9 @@
+# apple
+.DS_Store
+
+# cmake
+/build/
+
+# vscode
+/.vscode/*
+!/.vscode/tasks.json

@@ -1,0 +1,22 @@
+{
+  "name": "CppVsCodeDocker",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "twxs.cmake",
+        "eamodio.gitlens",
+        "mhutchie.git-graph"
+      ]
+    }
+  },
+  "remoteUser": "developer",
+  "updateRemoteUserUID": true
+}
