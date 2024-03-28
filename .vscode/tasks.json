@@ -31,6 +31,17 @@
       "group": "test",
       "problemMatcher": [],
       "dependsOn": "Build Project"
+    },
+    {
+      "label": "Clean Project",
+      "type": "shell",
+      "command": "git clean -dfX",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
     }
   ]
 }
