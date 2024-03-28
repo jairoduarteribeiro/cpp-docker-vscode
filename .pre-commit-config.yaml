@@ -6,3 +6,12 @@ repos:
         entry: .githooks/prepare-commit-msg
         language: script
         stages: [commit-msg]
+
+      - id: clang-format
+        name: clang-format
+        description: Auto-format C++ code to comply with the coding style
+        entry: clang-format -i --style=file
+        language: system
+        types: [file]
+        files: \.(c|cpp|cxx|cc|h|hpp|hxx|hh)$
+        stages: [commit]
