@@ -42,6 +42,16 @@
         "reveal": "always",
         "panel": "new"
       }
+    },
+    {
+      "label": "Rebuild Project",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Clean Project",
+        "Build Project"
+      ],
+      "problemMatcher": [],
+      "group": "build"
     }
   ]
 }
