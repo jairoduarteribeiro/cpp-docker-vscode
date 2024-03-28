@@ -31,6 +31,27 @@
       "group": "test",
       "problemMatcher": [],
       "dependsOn": "Build Project"
+    },
+    {
+      "label": "Clean Project",
+      "type": "shell",
+      "command": "git clean -dfX",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Rebuild Project",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Clean Project",
+        "Build Project"
+      ],
+      "problemMatcher": [],
+      "group": "build"
     }
   ]
 }
